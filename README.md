@@ -96,10 +96,10 @@ This project includes raw data, generated codes, labeled results, and code gener
     | Code | Meaning |
     | :--: | :-----: |
     | A1 | Incorrect Functionality |
-| A2 | Low Execution Efficiency |
-| A3 | Extra Memory Footprint |
-| A4 | Poor Readability |
-| A5 | Poor Maintainability and Scalability |
+    | A2 | Low Execution Efficiency |
+    | A3 | Extra Memory Footprint |
+    | A4 | Poor Readability |
+    | A5 | Poor Maintainability and Scalability |
 
 - [result](./result): The generated codes of each dataset. The following are explanations for each field:
     - _id: task/problem id
