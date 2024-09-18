@@ -2,6 +2,14 @@ This project includes raw data, generated codes, labeled results, and code gener
 
 - [data](./data): The raw data of each dataset. For CoderEval dataset, there is also official standard LLM inputs provided.
 
+- [figs](./figs): Script for drawing data images in the paper.
+    - [all_types.py](./figs/all_types.py): Bar chart of the number of each category of hallucinations(i.e. Fig. 6 in the paper).
+    - [cause_analyze.py](./figs/cause_analyze.py): Line chart showing the actual number of causes for each category of hallucinations(i.e. Fig. 2 in the appendix).
+    - [cause_impact_sankey.py](./figs/cause_impact_sankey.py): Sankey diagram of the causes, categories, and impacts of hallucinations(i.e. Fig. 8 in the paper).
+    - [dataset_detail.py](./figs/dataset_detail.py): Radar plots of hallucination categories distributed on different datasets(i.e. Fig. 7 in the paper).
+    - [impact_analyze.py](./figs/impact_analyze.py): Line chart showing the actual number of impacts for each category of hallucinations(i.e. Fig. 3 in the appendix).
+    - [prompt_analyze.py](./figs/prompt_analyze.py): Histogram of hallucination code proportion as a function of prompt length and complexity(i.e. Fig. 9&10 in the paper).
+
 - [label_result](./label_result): The labeled results of each dataset. The structure of each file is as follows:
 
   ```json
@@ -103,12 +111,13 @@ This project includes raw data, generated codes, labeled results, and code gener
 
 - [result](./result): The generated codes of each dataset. The following are explanations for each field:
     - _id: task/problem id
-    - model: The LLM that generated this code.
-    - index_within_model: The index of this data in the original dataset file.
+    - model: the LLM that generated this code.
+    - index_within_model: the index of this data in the original dataset file.
     - prompt: prompt in the original dataset file.
-    - generation: Generated code(after extraction).
-    - evaluation_result: The evaluation results of the code using the official evaluation script.
-    - raw_generation: The raw output of LLM.
-    - reference_solution: Reference solution in the original dataset file.
-- [client.py](./client.py): LLM Proxy Class.
-- [main.py](./main.py): Script for generating code.
+    - generation: generated code(after extraction).
+    - evaluation_result: the evaluation results of the code using the official evaluation script.
+    - raw_generation: the raw output of LLM.
+    - reference_solution: reference solution in the original dataset file.
+- [client.py](./client.py): LLM Proxy Class, a tool file serving main.py.
+- [main.py](./main.py): Script for generating code. When generating code, an instruction will be added before the function signature:
+    > Please try to directly implement this function according to its description:
