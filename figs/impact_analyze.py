@@ -2,88 +2,7 @@ import json
 import random
 import matplotlib.pyplot as plt
 
-
-def load_json(path):
-    with open(path) as __f:
-        return json.load(__f)
-
-
-def load_jsonl(path) -> dict[str, dict]:
-    with open(path) as f:
-        length = len(f.read().split('\n'))
-    with open(path) as f:
-        data = dict()
-        for i, line in enumerate(f):
-            line = json.loads(line)
-            data[f'{line["_id"]}-{i // (length // 4)}'] = line
-        return data
-
-
-label_map = {
-    'CEJava': load_json('../label_result/CEJava.json'),
-    'CEPython': load_json('../label_result/CEPython.json'),
-    'HumanEval': load_json('../label_result/HumanEval.json')
-}
-
-data_map = {
-    'CEJava': load_jsonl('../result/CEJava.jsonl'),
-    'CEPython': load_jsonl('../result/CEPython.jsonl'),
-    'HumanEval': load_jsonl('../result/HumanEval.jsonl')
-}
-
-schedule = load_json('../label_result/schedule.json')
-
-
-user2types = {}
-user_pair = set()
-factors = ['P1', 'P2', 'P3', 'P4', 'M1', 'M2']
-types = ['R1', 'R21', 'R22', 'R23', 'K1', 'K2', 'K31', 'K32', 'K33', 'C1', 'C2', 'C3', 'C4', 'C5']
-affections = ['A1', 'A2', 'A3', 'A4', 'A5']
-
-
-type2desc = {
-    'R1': 'Functional\nConflicting',
-    'R21': 'Non-functional\nConflicting',
-    'R22': 'Non-functional\nConflicting',
-    'R23': 'Non-functional\nConflicting',
-    'C1': 'Undefined\nVariables',
-    'C2': 'Useless\nStatements\n(executed\nwithout effect)',
-    'C3': 'Fragmented\nLogics',
-    'C4': 'Inconsistent\nLibraries',
-    'C5': 'Useless\nStatements\n(unexecuted)',
-    'K1': 'Common\nSense',
-    'K2': 'Mathematics\n& Natural\nScience',
-    'K31': 'Algorithm',
-    'K32': 'Library/\nProject',
-    'K33': 'Computer\nTheory'
-}
-
-factor2desc = {
-    'P1': 'Ambiguous',
-    'P2': 'Incomplete',
-    'P3': 'Overly complex',
-    'P4': 'Lengthy',
-    'M1': 'Poor Reasoning Ability',
-    'M2': 'Lack of Relevant Knowledge'
-}
-
-affection2desc = {
-    'A1': 'Function',
-    'A2': 'Execution efficiency',
-    'A3': 'Memory footprint',
-    'A4': 'Readability',
-    'A5': 'Maintainability and scalability'
-}
-
-
-def desc2type(__desc, mp):
-    for __k, __v in mp.items():
-        if __v == __desc:
-            return __k
-
-
-models = ['DeepSeek-Coder-1.3b', 'DeepSeek-Coder-7b', 'CodeLlama-7b', 'GPT-4']
-excluded_desc = {'Non-functional\nConflicting', 'Common\nSense', 'Inconsistent\nLibraries'}
+from constants import types, label_map, schedule, factors, affections, type2desc, excluded_desc, affection2desc
 
 factors_cnt = {x: [] for x in types}
 types_cnt = {x: [0, 0, 0, 0] for x in types}
@@ -143,14 +62,6 @@ print(affections_cnt)
 
 fig, ax = plt.subplots(figsize=(12, 6))
 
-factors_color = {
-    'P1': '#99c2ff',
-    'P2': '#4d94ff',
-    'P3': '#0052cc',
-    'P4': '#003d99',
-    'M1': '#ff934d',
-    'M2': '#ff6500'
-}
 
 affections_color = {
     'A1': '#ff3333',
@@ -158,12 +69,6 @@ affections_color = {
     'A3': '#cc33ff',
     'A4': '#3385ff',
     'A5': '#00ffff'
-}
-
-type_colors = {
-    'R': '#e68a00',
-    'C': '#b2b300',
-    'K': 'blue'
 }
 
 desc_list = list(affections_cnt.keys())

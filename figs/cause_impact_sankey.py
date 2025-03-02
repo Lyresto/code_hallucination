@@ -2,6 +2,9 @@ import json
 import random
 import plotly.graph_objects as go
 
+from constants import factor2desc, type2desc, affection2desc, excluded_desc, types, label_map, schedule, factors, \
+    affections
+
 
 def hex_to_rgba(hex_color, alpha=1.0):
     hex_color = hex_color.lstrip('#')
@@ -12,88 +15,6 @@ def hex_to_rgba(hex_color, alpha=1.0):
 
     return f'rgba({r}, {g}, {b}, {alpha})'
 
-
-def load_json(path):
-    with open(path) as __f:
-        return json.load(__f)
-
-
-def load_jsonl(path) -> dict[str, dict]:
-    with open(path) as f:
-        length = len(f.read().split('\n'))
-    with open(path) as f:
-        data = dict()
-        for i, line in enumerate(f):
-            line = json.loads(line)
-            data[f'{line["_id"]}-{i // (length // 4)}'] = line
-        return data
-
-
-label_map = {
-    'CEJava': load_json('../label_result/CEJava.json'),
-    'CEPython': load_json('../label_result/CEPython.json'),
-    'HumanEval': load_json('../label_result/HumanEval.json')
-}
-
-data_map = {
-    'CEJava': load_jsonl('../result/CEJava.jsonl'),
-    'CEPython': load_jsonl('../result/CEPython.jsonl'),
-    'HumanEval': load_jsonl('../result/HumanEval.jsonl')
-}
-
-schedule = load_json('../label_result/schedule.json')
-
-
-user2types = {}
-user_pair = set()
-factors = ['P1', 'P2', 'P3', 'P4', 'M1', 'M2']
-types = ['R1', 'R21', 'R22', 'R23', 'K1', 'K2', 'K31', 'K32', 'K33', 'C1', 'C2', 'C3', 'C4', 'C5']
-affections = ['A1', 'A2', 'A3', 'A4', 'A5']
-
-
-type2desc = {
-    'R1': 'Functional\nConflicting',
-    'R21': 'Non-functional\nConflicting',
-    'R22': 'Non-functional\nConflicting',
-    'R23': 'Non-functional\nConflicting',
-    'C1': 'Undefined\nVariables',
-    'C2': 'Useless\nStatements\n<br>(executed\nwithout effect)',
-    'C3': 'Fragmented\nLogics',
-    'C4': 'Inconsistent\nLibraries',
-    'C5': 'Useless\nStatements\n<br>(unexecuted)',
-    'K1': 'Common\nSense',
-    'K2': 'Mathematics\n&<br>Natural\nScience',
-    'K31': 'Algorithm',
-    'K32': 'Library/\nProject',
-    'K33': 'Computer\nTheory'
-}
-
-factor2desc = {
-    'P1': 'Ambiguous',
-    'P2': 'Incomplete',
-    'P3': 'Overly complex',
-    'P4': 'Lengthy',
-    'M1': 'Poor Reasoning Ability',
-    'M2': 'Lack of Relevant Knowledge'
-}
-
-affection2desc = {
-    'A1': 'Incorrect Functionality',
-    'A2': 'Low Execution Efficiency',
-    'A3': 'Extra Memory Footprint',
-    'A4': 'Poor Readability',
-    'A5': 'Poor Maintainability<br>and Scalability'
-}
-
-
-def desc2type(__desc, mp):
-    for __k, __v in mp.items():
-        if __v == __desc:
-            return __k
-
-
-models = ['DeepSeek-Coder-1.3b', 'DeepSeek-Coder-7b', 'CodeLlama-7b', 'GPT-4']
-excluded_desc = {'Non-functional\nConflicting', 'Common\nSense', 'Inconsistent\nLibraries'}
 
 fta_desc = [factor2desc[k] for k in sorted(factor2desc.keys())] + \
            [type2desc[k] for k in sorted(type2desc.keys())] + \

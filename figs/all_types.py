@@ -2,70 +2,8 @@ import json
 import random
 import matplotlib.pyplot as plt
 
-
-def load_json(path):
-    with open(path) as __f:
-        return json.load(__f)
-
-
-def load_jsonl(path) -> dict[str, dict]:
-    with open(path) as f:
-        length = len(f.read().split('\n'))
-    with open(path) as f:
-        data = dict()
-        for i, line in enumerate(f):
-            line = json.loads(line)
-            data[f'{line["_id"]}-{i // (length // 4)}'] = line
-        return data
-
-
-label_map = {
-    'CEJava': load_json('../label_result/CEJava.json'),
-    'CEPython': load_json('../label_result/CEPython.json'),
-    'HumanEval': load_json('../label_result/HumanEval.json')
-}
-
-data_map = {
-    'CEJava': load_jsonl('../result/CEJava.jsonl'),
-    'CEPython': load_jsonl('../result/CEPython.jsonl'),
-    'HumanEval': load_jsonl('../result/HumanEval.jsonl')
-}
-
-schedule = load_json('../label_result/schedule.json')
-
-
-user2types = {}
-user_pair = set()
-factors = ['P1', 'P2', 'P3', 'P4', 'M1', 'M2']
-types = ['R1', 'R21', 'R22', 'R23', 'K1', 'K2', 'K31', 'K32', 'K33', 'C1', 'C2', 'C3', 'C4', 'C5']
-affections = ['A1', 'A2', 'A3', 'A4', 'A5']
-
-
-type2desc = {
-    'R1': 'Functional Conflicting',
-    'R21': 'Non-functional Conflicting',
-    'R22': 'Non-functional Conflicting',
-    'R23': 'Non-functional Conflicting',
-    'C1': 'Undefined Variables',
-    'C2': 'Useless Statements (executed without effect)',
-    'C3': 'Fragmented Logics',
-    'C4': 'Inconsistent Libraries',
-    'C5': 'Useless Statements (unexecuted)',
-    'K1': 'Common Sense',
-    'K2': 'Mathematics & Natural Science',
-    'K31': 'Algorithm',
-    'K32': 'Library/Project',
-    'K33': 'Computer Theory'
-}
-
-
-def desc2type(__desc):
-    for __k, __v in type2desc.items():
-        if __v == __desc:
-            return __k
-
-
-models = ['DeepSeek-Coder-1.3B', 'DeepSeek-Coder-7B', 'CodeLlama-7B', 'GPT-4']
+from analyze import affections
+from constants import factors, types, label_map, schedule, type2desc, models_formal_name
 
 factors_cnt = {x: 0 for x in factors}
 types_cnt = {x: [0, 0, 0, 0] for x in types}
@@ -113,20 +51,16 @@ sums = [sum(v[i] for v in types_cnt.values()) for i in range(4)]
 print(sums)
 
 colors = ['#EE6666', '#73C0DE', '#3BA272', '#FC8452']
-type_colors = {
-    'R': '#e68a00',
-    'C': '#b2b300',
-    'K': 'blue'
-}
+
 fig, ax = plt.subplots(figsize=(14, 6))
 for i0, (desc, value) in enumerate(sorted(types_cnt.items(), key=lambda x: sum(x[1]))):
     left = 0
     for i, (v, c) in enumerate(zip(value, colors)):
         v = v / sums[i] * 100
         ax.barh(desc, v, left=left, color=c, alpha=0.9, edgecolor='grey', zorder=3,
-                label=f'{models[i]} ({sums[i]})' if desc == '(III) Library/Project' else '')
+                label=f'{models_formal_name[i]} ({sums[i]})' if desc == '(III) Library/Project' else '')
         left += v
-    ax.text(left + 5.0, i0, sum(value), ha='center', va='center', fontsize=12, color='black')
+    ax.text(left + 5.0, i0, str(sum(value)), ha='center', va='center', fontsize=12, color='black')
 
 ax.set_xlabel('Frequency (%)', fontdict={'fontsize': 18})
 ax.set_ylabel('Hallucination Categories', fontdict={'fontsize': 18})
@@ -136,5 +70,5 @@ ax.xaxis.grid(True, zorder=1)
 ax.legend(loc='lower right', fontsize=16)
 
 plt.tight_layout()
-# plt.show()
+plt.show()
 # plt.savefig('all_hallu_types.pdf', format='pdf')

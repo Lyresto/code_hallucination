@@ -1,0 +1,114 @@
+{
+    "A1": {
+        "all": {
+            "HumanEval": [
+                0,
+                163
+            ],
+            "CEPython": [
+                0,
+                -1
+            ],
+            "CEJava": [
+                0,
+                -1
+            ]
+        },
+        "done": 656,
+        "prefer": true
+    },
+    "ly": {
+        "all": {
+            "HumanEval": [
+                20,
+                163
+            ]
+        },
+        "done": 33
+    },
+    "B1": {
+        "all": {
+            "HumanEval": [
+                0,
+                163
+            ]
+        },
+        "done": 656
+    },
+    "B2": {
+        "all": {
+            "CEPython": [
+                0,
+                114
+            ]
+        },
+        "done": 460
+    },
+    "A2": {
+        "all": {
+            "CEPython": [
+                0,
+                114
+            ]
+        },
+        "done": 460,
+        "prefer": true
+    },
+    "B3": {
+        "all": {
+            "CEPython": [
+                115,
+                229
+            ]
+        },
+        "done": 460,
+        "prefer": true
+    },
+    "A3": {
+        "all": {
+            "CEPython": [
+                115,
+                229
+            ]
+        },
+        "done": 460
+    },
+    "B4": {
+        "all": {
+            "CEJava": [
+                0,
+                114
+            ]
+        },
+        "done": 460,
+        "prefer": true
+    },
+    "A4": {
+        "all": {
+            "CEJava": [
+                0,
+                114
+            ]
+        },
+        "done": 460
+    },
+    "B5": {
+        "all": {
+            "CEJava": [
+                115,
+                229
+            ]
+        },
+        "done": 460,
+        "prefer": true
+    },
+    "A5": {
+        "all": {
+            "CEJava": [
+                115,
+                229
+            ]
+        },
+        "done": 460
+    }
+}

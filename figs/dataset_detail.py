@@ -3,77 +3,8 @@ import random
 import matplotlib.pyplot as plt
 import numpy as np
 
+from constants import datasets2desc, factors, types, affections, label_map, schedule, type2desc, excluded_desc
 
-def load_json(path):
-    with open(path) as __f:
-        return json.load(__f)
-
-
-def load_jsonl(path) -> dict[str, dict]:
-    with open(path) as f:
-        length = len(f.read().split('\n'))
-    with open(path) as f:
-        data = dict()
-        for i, line in enumerate(f):
-            line = json.loads(line)
-            data[f'{line["_id"]}-{i // (length // 4)}'] = line
-        return data
-
-
-label_map = {
-    'CEJava': load_json('../label_result/CEJava.json'),
-    'CEPython': load_json('../label_result/CEPython.json'),
-    'HumanEval': load_json('../label_result/HumanEval.json')
-}
-
-data_map = {
-    'CEJava': load_jsonl('../result/CEJava.jsonl'),
-    'CEPython': load_jsonl('../result/CEPython.jsonl'),
-    'HumanEval': load_jsonl('../result/HumanEval.jsonl')
-}
-
-schedule = load_json('../label_result/schedule.json')
-
-
-user2types = {}
-user_pair = set()
-factors = ['P1', 'P2', 'P3', 'P4', 'M1', 'M2']
-types = ['R1', 'R21', 'R22', 'R23', 'K1', 'K2', 'K31', 'K32', 'K33', 'C1', 'C2', 'C3', 'C4', 'C5']
-affections = ['A1', 'A2', 'A3', 'A4', 'A5']
-
-
-type2desc = {
-    'R1': 'Functional Conflicting',
-    'R21': 'Non-functional Conflicting',
-    'R22': 'Non-functional Conflicting',
-    'R23': 'Non-functional Conflicting',
-    'C1': 'Undefined Variables',
-    'C2': 'Useless Statements\n(executed without effect)',
-    'C3': 'Fragmented Logics',
-    'C4': 'Inconsistent Libraries',
-    'C5': 'Useless Statements\n(unexecuted)',
-    'K1': 'Common Sense',
-    'K2': 'Mathematics &\nNatural Science',
-    'K31': 'Algorithm',
-    'K32': 'Library/Project',
-    'K33': 'Computer Theory'
-}
-
-excluded_desc = {'Non-functional Conflicting', 'Common Sense', 'Inconsistent Libraries'}
-
-
-def desc2type(__desc):
-    for __k, __v in type2desc.items():
-        if __v == __desc:
-            return __k
-
-
-models = ['DeepSeek-Coder-1.3b', 'DeepSeek-Coder-7b', 'CodeLlama-7b', 'GPT-4']
-datasets2desc = {
-    'HumanEval': 'HumanEval (Python)',
-    'CEJava': 'CoderEval (Java)',
-    'CEPython': 'CoderEval (Python)'
-}
 datasets = sorted(list(datasets2desc.keys()))
 
 factors_cnt = {x: 0 for x in factors}
@@ -133,11 +64,7 @@ types_desc = ['Functional Conflicting', 'Algorithm', 'Undefined Variables', 'Fra
               'Useless Statements\n(executed without effect)', 'Useless Statements\n(unexecuted)']
 
 colors = ['orange', 'green', 'blue']
-type_colors = {
-    'R': '#ff8000',
-    'C': '#b2b300',
-    'K': '#00ace6'
-}
+
 print(list(zip(datasets, colors)))
 for i in range(3):
     values = [types_cnt[k][i] / sum(types_cnt[k]) * 100 for k in types_desc]
