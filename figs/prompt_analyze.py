@@ -1,73 +1,59 @@
-import json
 import random
 import matplotlib.pyplot as plt
-import tiktoken
-
-from constants import types, affections, label_map, schedule, data_map, factors
-
-
-def get_prompt_length(prompt_):
-    enc = tiktoken.get_encoding("cl100k_base")
-    return len(enc.encode(prompt_))
+import numpy as np
+from tools import iter_data
 
 
-factors_cnt = {x: [] for x in types}
-types_cnt = {x: [0, 0, 0, 0] for x in types}
-affections_cnt = {x: 0 for x in affections}
-length = []
-hallu_length = []
-complexity = []
-hallu_complexity = []
-incomplete = [0, 0]
-hallu_incomplete = [0, 0]
-fuzzy = [0, 0]
-hallu_fuzzy = [0, 0]
-code_cnt = 0
-label_cnt = 0
+def main():
+    lengths = []
+    complexities = []
+    all_lengths = []
+    all_complexities = []
+    random.seed(42)
 
-for dataset, dataset_labels in label_map.items():
-    items = list(dataset_labels.items())
-    random.shuffle(items)
-    for task_id, task_labels in items:
-        for user, user_labels in task_labels.items():
-            if user not in schedule or 'prefer' not in schedule[user]:
-                continue
-            prompt_label = user_labels['prompt']
-            prompt = data_map[dataset][f'{task_id}-0']['prompt']
-            le = get_prompt_length(prompt)
-            comp = int(prompt_label['logic-complexity'])
-            fuz = int('fuzzy' in prompt_label)
-            inc = int('incomplete' in prompt_label)
-            for inner_index, code_labels in sorted(user_labels['code'].items()):
-                if len(code_labels) > 0:
-                    hallu_length.append(le)
-                    hallu_complexity.append(comp)
-                    hallu_fuzzy[fuz] += 1
-                    hallu_incomplete[inc] += 1
-                length.append(le)
-                complexity.append(comp)
-                fuzzy[fuz] += 1
-                incomplete[inc] += 1
-                for code_label in code_labels:
-                    tp = code_label['hallucination-type']
-                    if tp in types_cnt:
-                        types_cnt[tp][int(inner_index)] += 1
-                    elif tp == 'other' and '无法' in code_label['hallucination-type-other']:
-                        types_cnt['C5'][int(inner_index)] += 1
-                        tp = 'C5'
-                    else:
-                        continue
-                    factor_01 = [0] * 6
-                    for factor in code_label['factors']:
-                        if factor in factors:
-                            factor_01[factors.index(factor)] += 1
-                    factors_cnt[tp].append(factor_01)
-                    for affection in code_label['affections']:
-                        if affection in affections_cnt:
-                            affections_cnt[affection] += 1
-                    label_cnt += 1
-                if len(code_labels) > 0:
-                    code_cnt += 1
+    for item in iter_data():
+        all_lengths.append(item['prompt_length'])
+        # all_complexities.append(item['prompt_label']['logic-complexity'] + random.random() - 0.5)
+        all_complexities.append(item['prompt_label']['logic-complexity'])
+        if len(item['code_labels']) > 0:
+            lengths.append(all_lengths[-1])
+            complexities.append(all_complexities[-1])
+
+    bins = (16, 3)  # 设定网格划分数量
+    heatmap_range = ([min(*all_lengths), max(*all_lengths)], [0.5, 3.5])  # 坐标范围
+
+    # 计算两组散点在网格中的数量
+    count1, _, _ = np.histogram2d(lengths, complexities, bins=bins, range=heatmap_range)
+    count2, _, _ = np.histogram2d(all_lengths, all_complexities, bins=bins, range=heatmap_range)
+
+    # 计算比值（避免除零）
+    ratio = np.divide(count1, count2, out=np.full_like(count1, -0.4), where=(count2 != 0)) * 100
+
+    # 绘制热力图
+    plt.rcParams['font.family'] = 'Times New Roman'
+    _, ax = plt.subplots(figsize=(16, 12))
+    cax = plt.imshow(ratio.T, origin='lower', extent=(*heatmap_range[0], *heatmap_range[1]), cmap='gray_r',
+                     aspect='auto')
+    cbar = plt.colorbar(cax)
+    cbar.ax.tick_params(labelsize=20)
+    cbar.set_label(label="Hallucinatory Code Proportion (%)", fontsize=40, labelpad=25)
+    plt.scatter(all_lengths, all_complexities, c='lightgreen', s=1.5, label="No Hallucination Data Points", alpha=0.8)
+    plt.scatter(lengths, complexities, c='red', s=1.5, label="Hallucination Data Points", alpha=0.8)
+    lgd = plt.legend(fontsize=25)
+    for handle in lgd.legend_handles:
+        handle.set_alpha(1.0)
+    plt.xlabel('Prompt Tokens (#)', fontsize=40, labelpad=25)
+    plt.ylabel('Text Complexity', fontsize=40, labelpad=25)
+    ax.tick_params(axis='both', which='major', labelsize=30)
+    ax.set_yticks([1.0, 2.0, 3.0])
+    plt.tight_layout()
+    plt.savefig('prompt_analyze_origin.pdf', format='pdf')
+    # plt.show()
+
+
+if __name__ == '__main__':
+    main()
+
 
 """
 Length Analyze

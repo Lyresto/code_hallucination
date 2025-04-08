@@ -1,4 +1,21 @@
 {
+    "r1": {
+        "all": {
+            "HumanEval": [
+                0,
+                163
+            ],
+            "CEPython": [
+                0,
+                229
+            ],
+            "CEJava": [
+                0,
+                229
+            ]
+        },
+        "done": 144
+    },
     "A1": {
         "all": {
             "HumanEval": [

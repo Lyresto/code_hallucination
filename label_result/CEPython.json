@@ -3,13 +3,16 @@
         "A2": {
             "prompt": {
                 "logic-complexity": "1",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         },
         "B2": {
@@ -93,7 +96,9 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         },
         "B2": {
@@ -113,13 +118,41 @@
         "A2": {
             "prompt": {
                 "logic-complexity": "1",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [
+                    {
+                        "start-lineno": "27",
+                        "end-lineno": "27",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M1"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    },
+                    {
+                        "start-lineno": "29",
+                        "end-lineno": "29",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M1"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ],
+                "7": []
             }
         },
         "B2": {
@@ -299,6 +332,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "1",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -386,7 +420,9 @@
                         "conflict-content": "\u8fd9\u91cc\u5c06 arguments \u7684\u5947\u6570\u7d22\u5f15\u90e8\u5206\uff08\u5047\u8bbe\u4e3a\u503c\uff09\u4f20\u7ed9\u4e86 parse_args\uff0c\u8fd9\u5e76\u4e0d\u7b26\u5408\u9884\u671f\u3002\u5b9e\u9645\u4e0a\uff0c\u5e94\u5c06\u6574\u4e2a\u53c2\u6570\u5217\u8868\u4f20\u7ed9 parse_args\uff0c\u800c\u4e0d\u662f\u4ec5\u4ec5\u503c\u90e8\u5206\u3002",
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -473,7 +509,17 @@
                 "0": [],
                 "2": [],
                 "3": [],
-                "1": []
+                "1": [],
+                "4": [],
+                "7": [
+                    {
+                        "start-lineno": "",
+                        "end-lineno": "",
+                        "hallucination-type": "K32",
+                        "factors": [],
+                        "affections": []
+                    }
+                ]
             }
         }
     },
@@ -561,7 +607,22 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [
+                    {
+                        "start-lineno": "19",
+                        "end-lineno": "19",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ],
+                "7": []
             }
         }
     },
@@ -679,7 +740,9 @@
                         ],
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -753,6 +816,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "1",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -830,7 +894,22 @@
                         "conflict-content": "commands \u53d8\u91cf\u662f\u4ece get_borgmatic_parser() \u8fd4\u56de\u7684\u89e3\u6790\u5668\u4e2d\u63d0\u53d6\u7684\uff0c\u4f46\u8be5\u51fd\u6570\u4e0d\u5b58\u5728\uff0c\u5bfc\u81f4 commands \u4e0d\u80fd\u6b63\u786e\u5730\u751f\u6210\u3002",
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": [
+                    {
+                        "start-lineno": "67",
+                        "end-lineno": "69",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M1"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ],
+                "7": []
             }
         }
     },
@@ -920,6 +999,7 @@
         "A2": {
             "prompt": {
                 "logic-complexity": "3",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -956,7 +1036,30 @@
                         "trigger-testcase": ""
                     }
                 ],
-                "3": []
+                "3": [],
+                "4": [
+                    {
+                        "start-lineno": "15",
+                        "end-lineno": "15",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ],
+                "7": [
+                    {
+                        "start-lineno": "",
+                        "end-lineno": "",
+                        "hallucination-type": "C1",
+                        "factors": [],
+                        "affections": []
+                    }
+                ]
             }
         }
     },
@@ -1031,6 +1134,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "3",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -1094,7 +1198,8 @@
                         "conflict-content": "prompt\u6ca1\u6709\u6307\u51fa\u9700\u8981\u5bf9\u5f02\u5e38\u8fdb\u884c\u5904\u7406\uff0c\u4e14prompt\u63cf\u8ff0\u7684\u51fd\u6570\u9700\u8981\u5904\u7406\u591a\u7ea7\u5b50\u89e3\u6790\u5668\u548c\u5168\u5c40\u53c2\u6570\uff0c\u5e76\u8fd4\u56de\u4e00\u4e2a\u5b57\u5178\u6620\u5c04\uff0c\u800c\u6a21\u578b\u5b9e\u73b0\u4e2d\u7684\u4ee3\u7801\u4ec5\u521b\u5efa\u4e86\u4e24\u4e2a\u7b80\u5355\u7684\u5b50\u89e3\u6790\u5668",
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": []
             }
         }
     },
@@ -1174,6 +1279,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "3",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -1240,7 +1346,9 @@
                         "conflict-content": "\u5b83\u4ec5\u904d\u5386\u4e86\u6bcf\u4e2a\u5b50\u89e3\u6790\u5668\uff0c\u5c1d\u8bd5\u89e3\u6790\u53c2\u6570\uff0c\u4f46\u672a\u5904\u7406\u67d0\u4e9b\u7279\u5b9a\u7ec6\u8282\uff0c\u5982\u5904\u7406\u5b50\u89e3\u6790\u5668\u522b\u540d\u3001\u5904\u7406 borg \u64cd\u4f5c\u7684\u7279\u6b8a\u60c5\u51b5\u7b49\u3002",
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -1260,13 +1368,15 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "1",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": []
             }
         }
     },
@@ -1292,7 +1402,9 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -1413,7 +1525,9 @@
                             "A5"
                         ]
                     }
-                ]
+                ],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -1467,7 +1581,17 @@
                 ],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": [
+                    {
+                        "start-lineno": "",
+                        "end-lineno": "",
+                        "hallucination-type": "R1",
+                        "factors": [],
+                        "affections": []
+                    }
+                ]
             }
         }
     },
@@ -1610,7 +1734,8 @@
                         "conflict-content": "prompt\u4e2d\u5e76\u6ca1\u6709\u8bf4\u660eURL\u53c2\u6570\u4f7f\u7528\u5927\u62ec\u53f7\uff08{}\uff09\u5305\u56f4\u3002\u6a21\u578b\u751f\u6210\u7684\u4ee3\u7801\u5047\u8bbeURL\u4e2d\u7684\u81ea\u5b9a\u4e49\u5b57\u7b26\u4e32\u9879\u662f\u4f7f\u7528\u5927\u62ec\u53f7\u5305\u56f4\u7684\uff0c\u800c\u8fd9\u4e0e\u539f\u59cb\u63cf\u8ff0\u4e2d\u7684\u66ff\u6362\u89c4\u5219\u4e0d\u4e00\u81f4,prompt\u7684\u6a21\u7cca\u6027\u4e5f\u662f\u539f\u56e0\u4e4b\u4e00",
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": []
             }
         }
     },
@@ -1720,7 +1845,8 @@
                         "trigger-testcase": ""
                     }
                 ],
-                "3": []
+                "3": [],
+                "4": []
             }
         }
     },
@@ -1783,7 +1909,9 @@
                         ],
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -1867,7 +1995,21 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [
+                    {
+                        "start-lineno": "11",
+                        "end-lineno": "12",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ]
             }
         }
     },
@@ -1946,6 +2088,7 @@
         "A2": {
             "prompt": {
                 "logic-complexity": "2",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -2008,7 +2151,8 @@
                         "conflict-content": "prompt\u8981\u6c42\u6839\u636e\u7d22\u5f15\u6216\u952e\u503c\u8fd4\u56de\u5bf9\u5e94\u7684\uff0c\u4f46\u751f\u6210\u4ee3\u7801\u53ea\u8003\u8651\u4e86\u952e\u503c",
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": []
             }
         }
     },
@@ -2034,7 +2178,8 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": []
             }
         }
     },
@@ -2109,6 +2254,7 @@
         "A2": {
             "prompt": {
                 "logic-complexity": "3",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -2129,7 +2275,22 @@
                 ],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [
+                    {
+                        "start-lineno": "14",
+                        "end-lineno": "14",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ],
+                "7": []
             }
         }
     },
@@ -2187,6 +2348,7 @@
         "A2": {
             "prompt": {
                 "logic-complexity": "1",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -2221,7 +2383,9 @@
                 ],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -2364,7 +2528,34 @@
                     }
                 ],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [
+                    {
+                        "start-lineno": "22",
+                        "end-lineno": "22",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    },
+                    {
+                        "start-lineno": "24",
+                        "end-lineno": "28",
+                        "hallucination-type": "R1",
+                        "factors": [
+                            "M1"
+                        ],
+                        "affections": [
+                            "A2",
+                            "A4"
+                        ],
+                        "conflict-content": "Appends a DISCARD message to the output queue."
+                    }
+                ]
             }
         }
     },
@@ -2445,7 +2636,43 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [
+                    {
+                        "start-lineno": "44",
+                        "end-lineno": "44",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    },
+                    {
+                        "start-lineno": "47",
+                        "end-lineno": "53",
+                        "hallucination-type": "R1",
+                        "factors": [
+                            "M1"
+                        ],
+                        "affections": [
+                            "A2",
+                            "A4"
+                        ],
+                        "conflict-content": "Appends a BEGIN message to the output queue."
+                    }
+                ],
+                "7": [
+                    {
+                        "start-lineno": "",
+                        "end-lineno": "",
+                        "hallucination-type": "K32",
+                        "factors": [],
+                        "affections": []
+                    }
+                ]
             }
         }
     },
@@ -2521,7 +2748,7 @@
         },
         "B3": {
             "prompt": {
-                "logic-complexity": "1",
+                "logic-complexity": "2",
                 "fuzzy-content": ""
             },
             "code": {
@@ -2583,6 +2810,16 @@
                         ],
                         "conflict-content": "prompt\u8981\u6c42\u79fb\u9664\u8def\u5f84\u7684root\u90e8\u5206\u5e76\u5728\u5931\u8d25\u65f6\u629b\u51fa\u5f02\u5e38\u3002\u6a21\u578b\u751f\u6210\u7684\u4ee3\u7801\u4f7f\u7528startswith\u6765\u68c0\u67e5\u8def\u5f84\u662f\u5426\u4ee5root\u5f00\u5934",
                         "trigger-testcase": ""
+                    }
+                ],
+                "4": [],
+                "7": [
+                    {
+                        "start-lineno": "",
+                        "end-lineno": "",
+                        "hallucination-type": "R1",
+                        "factors": [],
+                        "affections": []
                     }
                 ]
             }
@@ -2664,7 +2901,9 @@
                     }
                 ],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -2804,7 +3043,8 @@
                         "conflict-content": "\u5173\u952e\u5728\u4e8e\u662f\u5426\u9700\u8981\u5c06\"path_name\"\u8fdb\u884c\u6269\u5c55",
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": []
             }
         }
     },
@@ -2917,7 +3157,9 @@
                         "trigger-testcase": ""
                     }
                 ],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -2986,7 +3228,7 @@
         },
         "B3": {
             "prompt": {
-                "logic-complexity": "1",
+                "logic-complexity": "2",
                 "fuzzy": "true",
                 "incomplete": "true",
                 "fuzzy-content": "\u4ece\u53c2\u8003\u4ee3\u7801\u6765\u770b\u9700\u8981\u8fdb\u884c\u586b\u5145\uff0c\u4f46\u6ca1\u6709\u6307\u5b9a\u7528\u4ec0\u4e48\u5b57\u7b26\u8fdb\u884c\u586b\u5145"
@@ -3036,7 +3278,9 @@
                         "trigger-testcase": ""
                     }
                 ],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -3118,7 +3362,9 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -3171,7 +3417,9 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -3248,6 +3496,7 @@
         "A2": {
             "prompt": {
                 "logic-complexity": "1",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -3282,7 +3531,9 @@
                         "trigger-testcase": ""
                     }
                 ],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -3373,7 +3624,9 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -3469,7 +3722,9 @@
                         "trigger-testcase": ""
                     }
                 ],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -3504,6 +3759,7 @@
             "prompt": {
                 "logic-complexity": "1",
                 "fuzzy": "true",
+                "incomplete": "true",
                 "fuzzy-content": "version\u63cf\u8ff0\u4e0d\u5b8c\u6574"
             },
             "code": {
@@ -3524,7 +3780,8 @@
                 ],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": []
             }
         }
     },
@@ -3596,13 +3853,16 @@
         "A2": {
             "prompt": {
                 "logic-complexity": "2",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -3657,7 +3917,9 @@
                         "trigger-testcase": ""
                     }
                 ],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -3790,7 +4052,8 @@
                         "conflict-content": "\u7f3a\u5c11LRU\u7b97\u6cd5\u7684\u5b9e\u73b0",
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": []
             }
         }
     },
@@ -3867,6 +4130,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "2",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -3940,6 +4204,30 @@
                             "A1"
                         ],
                         "trigger-testcase": ""
+                    }
+                ],
+                "4": [
+                    {
+                        "start-lineno": "14",
+                        "end-lineno": "14",
+                        "hallucination-type": "R1",
+                        "factors": [
+                            "M1"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "conflict-content": "key in dictionary will be replaced by register number",
+                        "trigger-testcase": ""
+                    }
+                ],
+                "7": [
+                    {
+                        "start-lineno": "",
+                        "end-lineno": "",
+                        "hallucination-type": "R1",
+                        "factors": [],
+                        "affections": []
                     }
                 ]
             }
@@ -4033,7 +4321,8 @@
                 ],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": []
             }
         }
     },
@@ -4059,7 +4348,9 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -4198,7 +4489,9 @@
                         "conflict-content": "\u578b\u8fd4\u56de\u7684\u7ed3\u679c\u7c7b\u578b\u4e3a list\uff0c\u800c\u539f\u59cb\u51fd\u6570\u671f\u671b\u8fd4\u56de\u7684\u662f\u4e00\u4e2a set\u3002\u539f\u59cb\u4ee3\u7801\u4f7f\u7528 set \u53bb\u91cd\u5b50\u7c7b\uff0c\u8fd9\u4f1a\u5f71\u54cd\u6700\u7ec8\u7ed3\u679c\u7684\u51c6\u786e\u6027\u3002",
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -4306,7 +4599,8 @@
                         "trigger-testcase": ""
                     }
                 ],
-                "3": []
+                "3": [],
+                "4": []
             }
         }
     },
@@ -4360,7 +4654,9 @@
                         "trigger-testcase": ""
                     }
                 ],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -4494,7 +4790,9 @@
                         "trigger-testcase": ""
                     }
                 ],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -4570,6 +4868,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "3",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -4629,6 +4928,16 @@
                         ],
                         "trigger-testcase": ""
                     }
+                ],
+                "4": [],
+                "7": [
+                    {
+                        "start-lineno": "",
+                        "end-lineno": "",
+                        "hallucination-type": "C1",
+                        "factors": [],
+                        "affections": []
+                    }
                 ]
             }
         }
@@ -4655,7 +4964,9 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -4764,7 +5075,9 @@
                         ],
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -4905,7 +5218,9 @@
                         "conflict-content": "prompt  def unquote(name):  \t\"\"\"  \tRemove quote from the given name.  \t\"\"\"  \t \u53c2\u8003\u4ee3\u7801  import re  def unquote(name):      \"\"\"Remove quote from the given name.\"\"\"      assert isinstance(name, bytes)        # This function just gives back the original text if it can decode it      def unquoted_char(match):          \"\"\"For each ;000 return the corresponding byte.\"\"\"          if len(match.group()) != 4:              return match.group          try:              return bytes([int(match.group()[1:])])          except ValueError:              return match.group        # Remove quote using regex      return re.sub(b\";[0-9]{3}\", unquoted_char, name, re.S)   \u9519\u8bef\u4fe1\u606f\uff08\u4ec5\u4f9b\u53c2\u8003\uff09  if __name__ == \"__main__\":      test_unquote()        ---------------------------  Traceback (most recent call last):    File \"/home/travis/builds/repos/standalone/rdiffweb-core-librdiff-unquote0.py\", line 25, in       test_unquote()    File \"/home/travis/builds/repos/standalone/rdiffweb-core-librdiff-unquote0.py\", line 16, in test_unquote      assert unquote(b\"Hello\") == b\"Hello\"    File \"/home/travis/builds/repos/standalone/rdiffweb-core-librdiff-unquote0.py\", line 10, in unquote      return name.replace('\"', '').replace(\"'\", \"\")  TypeError: a bytes-like object is required, not 'str'   \u6a21\u578b\u54cd\u5e94  Sure, here is a simple Python function that removes both single and double quotes from a given string:    ```python  def unquote(name):      \"\"\"      Remove quote from the given name.      \"\"\"      return name.replace('\"', '').replace(\"'\", \"\")  ```    This function uses the `replace()` method of the string to replace all occurrences of single and double quotes with an empty string, effectively removing them. \u63d0\u53d6\u4ee3\u7801      def unquote(name):      \"\"\"      Remove quote from the given name.      \"\"\"      return name.replace('\"', '').replace(\"'\", \"\")",
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -4945,7 +5260,21 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [
+                    {
+                        "start-lineno": "5",
+                        "end-lineno": "8",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ]
             }
         }
     },
@@ -5011,7 +5340,9 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -5078,6 +5409,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "3",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -5138,7 +5470,8 @@
                         "trigger-testcase": ""
                     }
                 ],
-                "3": []
+                "3": [],
+                "4": []
             }
         }
     },
@@ -5285,7 +5618,9 @@
                         ],
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -5353,7 +5688,9 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -5517,6 +5854,16 @@
                         "conflict-content": "\u5047\u8bbe\u4e86\u53c2\u6570 ignored \u662f\u4e00\u4e2a\u5305\u542b\u88ab\u5ffd\u7565\u6587\u4ef6\u540d\u7684\u5217\u8868\uff0c\u4f46\u6839\u636e\u51fd\u6570\u7b7e\u540d\uff0cignored \u5e94\u8be5\u662f\u7528\u4e8e\u6307\u5b9a\u76ee\u5f55\u7684\u53c2\u6570",
                         "trigger-testcase": ""
                     }
+                ],
+                "4": [],
+                "7": [
+                    {
+                        "start-lineno": "",
+                        "end-lineno": "",
+                        "hallucination-type": "R1",
+                        "factors": [],
+                        "affections": []
+                    }
                 ]
             }
         }
@@ -5650,7 +5997,8 @@
                         "conflict-content": "\u6a21\u578b\u751f\u6210\u7684\u4ee3\u7801\u5b9e\u73b0\u4e86\u68c0\u67e5\u6587\u4ef6\u6269\u5c55\u540d\u662f\u5426\u5728\u652f\u6301\u7684\u7c7b\u578b\u5217\u8868\u4e2d\uff0c\u8fd9\u4e0eprompt\u4e2d\u6240\u63cf\u8ff0\u7684\u68c0\u67e5\u903b\u8f91\u4e0d\u4e00\u81f4\u3002prompt\u4e2d\u6ca1\u6709\u63d0\u5230\u6587\u4ef6\u6269\u5c55\u540d\u7684\u68c0\u67e5\uff0c\u53ea\u63d0\u5230\u4e86\u68c0\u67e5\u6587\u4ef6\u540d\u662f\u5426\u662f\u652f\u6301\u7684\u7c7b\u578b\u3002",
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": []
             }
         }
     },
@@ -5677,7 +6025,8 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": []
             }
         }
     },
@@ -5825,7 +6174,9 @@
                         "conflict-content": "\u63d0\u793a\u8bcd\u4e2d\u5e76\u672a\u8981\u6c42\u5c06\u590d\u6570\u5f62\u5f0f\u8f6c\u6362\u4e3a\u5355\u6570\u5f62\u5f0f\uff0c\u800c\u662f\u9700\u8981\u5c06\u590d\u6570\u5f62\u5f0f\u4f5c\u4e3a\u6709\u6548\u8f93\u5165\u5904\u7406\u3002",
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -5891,6 +6242,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "2",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -5946,7 +6298,17 @@
                         "trigger-testcase": ""
                     }
                 ],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": [
+                    {
+                        "start-lineno": "",
+                        "end-lineno": "",
+                        "hallucination-type": "K33",
+                        "factors": [],
+                        "affections": []
+                    }
+                ]
             }
         }
     },
@@ -6081,7 +6443,8 @@
                         ],
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": []
             }
         }
     },
@@ -6107,7 +6470,9 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -6180,6 +6545,7 @@
         "A2": {
             "prompt": {
                 "logic-complexity": "3",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -6199,7 +6565,8 @@
                 ],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": []
             }
         }
     },
@@ -6278,7 +6645,8 @@
                         "trigger-testcase": ""
                     }
                 ],
-                "3": []
+                "3": [],
+                "4": []
             }
         }
     },
@@ -6304,7 +6672,9 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -6330,7 +6700,8 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": []
             }
         }
     },
@@ -6412,7 +6783,8 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": []
             }
         }
     },
@@ -6439,7 +6811,9 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -6511,7 +6885,8 @@
         "A2": {
             "prompt": {
                 "logic-complexity": "3",
-                "fuzzy-content": ""
+                "fuzzy": "true",
+                "fuzzy-content": "then the suffix that begins with the object must be in both orderings."
             },
             "code": {
                 "0": [
@@ -6559,7 +6934,8 @@
                         "trigger-testcase": ""
                     }
                 ],
-                "3": []
+                "3": [],
+                "4": []
             }
         }
     },
@@ -6639,6 +7015,21 @@
                         ],
                         "trigger-testcase": ""
                     }
+                ],
+                "4": [
+                    {
+                        "start-lineno": "19",
+                        "end-lineno": "22",
+                        "hallucination-type": "R1",
+                        "factors": [
+                            "M1"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "conflict-content": "The value returned is an `~zope.interface.interfaces.IDeclaration`",
+                        "trigger-testcase": ""
+                    }
                 ]
             }
         }
@@ -6707,7 +7098,8 @@
                         "trigger-testcase": ""
                     }
                 ],
-                "3": []
+                "3": [],
+                "4": []
             }
         }
     },
@@ -6748,7 +7140,9 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -6887,7 +7281,9 @@
                         ],
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -6944,7 +7340,9 @@
                     }
                 ],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -6963,14 +7361,15 @@
         },
         "B3": {
             "prompt": {
-                "logic-complexity": "3",
+                "logic-complexity": "2",
                 "fuzzy-content": ""
             },
             "code": {
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": []
             }
         }
     },
@@ -7016,6 +7415,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "2",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -7049,7 +7449,9 @@
                         ],
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -7098,7 +7500,7 @@
         },
         "B3": {
             "prompt": {
-                "logic-complexity": "3",
+                "logic-complexity": "1",
                 "fuzzy-content": ""
             },
             "code": {
@@ -7132,7 +7534,8 @@
                         "trigger-testcase": ""
                     }
                 ],
-                "3": []
+                "3": [],
+                "4": []
             }
         }
     },
@@ -7169,8 +7572,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "2",
-                "fuzzy": "true",
-                "fuzzy-content": "\u6ca1\u6307\u660e\u9488\u5bf9\u54ea\u4e2a\u64cd\u4f5c\u7cfb\u7edf\uff0c\u4e0d\u540c\u64cd\u4f5c\u7cfb\u7edf\u5206\u9694\u7b26\u4e0d\u4e00\u6837"
+                "fuzzy-content": ""
             },
             "code": {
                 "0": [
@@ -7192,7 +7594,9 @@
                 ],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -7254,7 +7658,7 @@
         },
         "B3": {
             "prompt": {
-                "logic-complexity": "2",
+                "logic-complexity": "1",
                 "fuzzy-content": ""
             },
             "code": {
@@ -7302,7 +7706,17 @@
                         "trigger-testcase": ""
                     }
                 ],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": [
+                    {
+                        "start-lineno": "",
+                        "end-lineno": "",
+                        "hallucination-type": "R1",
+                        "factors": [],
+                        "affections": []
+                    }
+                ]
             }
         }
     },
@@ -7439,7 +7853,9 @@
                         "conflict-content": "\u56e0\u4e3a commands \u88ab\u5f53\u4f5c\u5355\u4e2a\u547d\u4ee4\u5904\u7406\uff0c\u800c\u4e0d\u662f\u5217\u8868\u4e2d\u7684\u591a\u4e2a\u547d\u4ee4\uff0c\u56e0\u6b64\u4ee3\u7801\u65e0\u6cd5\u6309\u9884\u671f\u6267\u884c\u591a\u4e2a\u547d\u4ee4\u3002",
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -7492,7 +7908,8 @@
                         "trigger-testcase": ""
                     }
                 ],
-                "3": []
+                "3": [],
+                "4": []
             }
         }
     },
@@ -7572,7 +7989,8 @@
                         ],
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": []
             }
         }
     },
@@ -7649,6 +8067,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "1",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -7738,7 +8157,8 @@
                         ],
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": []
             }
         }
     },
@@ -7815,6 +8235,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "2",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -7848,7 +8269,8 @@
                     }
                 ],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": []
             }
         }
     },
@@ -7907,6 +8329,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "2",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -7955,7 +8378,9 @@
                         "trigger-testcase": ""
                     }
                 ],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -8064,7 +8489,8 @@
                         ],
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": []
             }
         }
     },
@@ -8219,7 +8645,8 @@
                         "conflict-content": "\u6ca1\u6307\u5b9a\u89e3\u6790\u6587\u4ef6\u4e3ajson\u683c\u5f0f\u7684",
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": []
             }
         }
     },
@@ -8358,7 +8785,9 @@
                         "conflict-content": "prompt\u4e2d\u660e\u786e\u8981\u6c42\u51fd\u6570\u8fd4\u56de\u4e00\u4e2a\u5bf9\u5e94\u4e8eobj\u7684bytes\u5bf9\u8c61\uff0c\u5e76\u4e14\u662f\u5728obj\u662f\u5b57\u7b26\u4e32\u7684\u60c5\u51b5\u4e0b\u4f7f\u7528UTF-8\u7f16\u7801\uff0c\u4f46\u6b64\u4ee3\u7801\u4e2d\u7684\u529f\u80fd\u4e3a\u68c0\u67e5obj\u662f\u5426\u662f\u5b57\u7b26\u4e32\uff0c\u5e76\u5c06\u5176\u7f16\u7801\u4e3abytes\u3002",
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -8497,7 +8926,9 @@
                         "conflict-content": "\u4ee3\u7801\u8fd4\u56de datetime.time \u5bf9\u8c61\u800c\u975e\u7c7b\u5b9e\u4f8b\uff0c\u672a\u7b26\u5408 prompt \u4e2d\u7684 :rtype: Time \u63cf\u8ff0\u3002",
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -8569,6 +9000,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "4",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -8633,7 +9065,22 @@
                         ],
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": [
+                    {
+                        "start-lineno": "15",
+                        "end-lineno": "21",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ],
+                "7": []
             }
         }
     },
@@ -8700,7 +9147,9 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -8755,7 +9204,8 @@
                         "trigger-testcase": ""
                     }
                 ],
-                "3": []
+                "3": [],
+                "4": []
             }
         }
     },
@@ -8797,7 +9247,21 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [
+                    {
+                        "start-lineno": "21",
+                        "end-lineno": "24",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ]
             }
         }
     },
@@ -8865,7 +9329,8 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": []
             }
         }
     },
@@ -8949,7 +9414,8 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": []
             }
         }
     },
@@ -9029,7 +9495,9 @@
                 ],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -9085,7 +9553,21 @@
                         "trigger-testcase": ""
                     }
                 ],
-                "3": []
+                "3": [],
+                "4": [
+                    {
+                        "start-lineno": "19",
+                        "end-lineno": "23",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ]
             }
         }
     },
@@ -9124,7 +9606,8 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": []
             }
         }
     },
@@ -9152,7 +9635,21 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [
+                    {
+                        "start-lineno": "13",
+                        "end-lineno": "13",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ]
             }
         }
     },
@@ -9229,6 +9726,7 @@
         "A2": {
             "prompt": {
                 "logic-complexity": "5",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -9283,7 +9781,30 @@
                         "trigger-testcase": ""
                     }
                 ],
-                "3": []
+                "3": [],
+                "4": [
+                    {
+                        "start-lineno": "29",
+                        "end-lineno": "30",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ],
+                "7": [
+                    {
+                        "start-lineno": "",
+                        "end-lineno": "",
+                        "hallucination-type": "K32",
+                        "factors": [],
+                        "affections": []
+                    }
+                ]
             }
         }
     },
@@ -9316,6 +9837,7 @@
         "A2": {
             "prompt": {
                 "logic-complexity": "3",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -9335,7 +9857,21 @@
                 ],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [
+                    {
+                        "start-lineno": "28",
+                        "end-lineno": "28",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ]
             }
         }
     },
@@ -9390,7 +9926,9 @@
                         "conflict-content": "\u6ca1\u6709\u68c0\u67e5\u662f\u5426\u4e3a Source sequence\u7acb\u523b\u8fd4\u56de\u771f",
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -9416,7 +9954,9 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -9457,7 +9997,9 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -9497,7 +10039,9 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -9574,6 +10118,7 @@
         "A2": {
             "prompt": {
                 "logic-complexity": "3",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -9594,7 +10139,23 @@
                 ],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [
+                    {
+                        "start-lineno": "22",
+                        "end-lineno": "22",
+                        "hallucination-type": "R1",
+                        "factors": [
+                            "M1"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "conflict-content": "For level 1,  if a key is present both in *d1* and *d2* but has different values,  it is included into the difference.",
+                        "trigger-testcase": ""
+                    }
+                ],
+                "7": []
             }
         }
     },
@@ -9649,7 +10210,30 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [
+                    {
+                        "start-lineno": "44",
+                        "end-lineno": "44",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ],
+                "7": [
+                    {
+                        "start-lineno": "",
+                        "end-lineno": "",
+                        "hallucination-type": "K32",
+                        "factors": [],
+                        "affections": []
+                    }
+                ]
             }
         }
     },
@@ -9694,14 +10278,17 @@
         },
         "A2": {
             "prompt": {
-                "logic-complexity": "4",
+                "logic-complexity": "3",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
                 "1": [],
                 "2": [],
                 "3": [],
-                "0": []
+                "0": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -9777,13 +10364,16 @@
         "A2": {
             "prompt": {
                 "logic-complexity": "3",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -9836,7 +10426,8 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": []
             }
         }
     },
@@ -9903,7 +10494,9 @@
                     }
                 ],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -9978,13 +10571,16 @@
         "A2": {
             "prompt": {
                 "logic-complexity": "5",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
                 "1": [],
                 "2": [],
                 "3": [],
-                "0": []
+                "0": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -10066,6 +10662,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "3",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -10129,7 +10726,9 @@
                         "conflict-content": " 'Bookmarks' object has no attribute 'bookmarks'",
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -10211,6 +10810,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "2",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -10231,7 +10831,9 @@
                 ],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -10310,7 +10912,7 @@
         },
         "B3": {
             "prompt": {
-                "logic-complexity": "3",
+                "logic-complexity": "4",
                 "incomplete": "true",
                 "fuzzy-content": ""
             },
@@ -10371,6 +10973,35 @@
                         "affections": [
                             "A1"
                         ],
+                        "trigger-testcase": ""
+                    }
+                ],
+                "4": [
+                    {
+                        "start-lineno": "33",
+                        "end-lineno": "33",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    },
+                    {
+                        "start-lineno": "43",
+                        "end-lineno": "43",
+                        "hallucination-type": "C1",
+                        "factors": [
+                            "M1",
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1",
+                            "A4"
+                        ],
+                        "conflict-content": "LenaValueError",
                         "trigger-testcase": ""
                     }
                 ]
@@ -10448,7 +11079,7 @@
         },
         "B3": {
             "prompt": {
-                "logic-complexity": "3",
+                "logic-complexity": "4",
                 "incomplete": "true",
                 "fuzzy-content": ""
             },
@@ -10512,7 +11143,22 @@
                         "conflict-content": "self.coordinates\u672a\u5b9a\u4e49",
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": [
+                    {
+                        "start-lineno": "43",
+                        "end-lineno": "43",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ],
+                "7": []
             }
         }
     },
@@ -10609,7 +11255,8 @@
                         "trigger-testcase": ""
                     }
                 ],
-                "3": []
+                "3": [],
+                "4": []
             }
         }
     },
@@ -10659,13 +11306,15 @@
         "A2": {
             "prompt": {
                 "logic-complexity": "4",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": []
             }
         }
     },
@@ -10795,7 +11444,37 @@
                         ],
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": [
+                    {
+                        "start-lineno": "16",
+                        "end-lineno": "20",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    },
+                    {
+                        "start-lineno": "48",
+                        "end-lineno": "48",
+                        "hallucination-type": "C1",
+                        "factors": [
+                            "M1",
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1",
+                            "A4"
+                        ],
+                        "conflict-content": "Graph",
+                        "trigger-testcase": ""
+                    }
+                ],
+                "7": []
             }
         }
     },
@@ -10845,13 +11524,28 @@
         "A2": {
             "prompt": {
                 "logic-complexity": "3",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [
+                    {
+                        "start-lineno": "20",
+                        "end-lineno": "20",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M1"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ]
             }
         }
     },
@@ -10885,14 +11579,30 @@
         },
         "B3": {
             "prompt": {
-                "logic-complexity": "5",
+                "logic-complexity": "4",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [
+                    {
+                        "start-lineno": "23",
+                        "end-lineno": "23",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": "pass"
+                    }
+                ],
+                "7": []
             }
         }
     },
@@ -10912,13 +11622,28 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "4",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [
+                    {
+                        "start-lineno": "29",
+                        "end-lineno": "29",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ]
             }
         }
     },
@@ -10952,13 +11677,15 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "1",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": []
             }
         }
     },
@@ -11023,7 +11750,7 @@
         },
         "B3": {
             "prompt": {
-                "logic-complexity": "2",
+                "logic-complexity": "1",
                 "fuzzy-content": ""
             },
             "code": {
@@ -11057,7 +11784,8 @@
                         "trigger-testcase": ""
                     }
                 ],
-                "3": []
+                "3": [],
+                "4": []
             }
         }
     },
@@ -11123,6 +11851,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "2",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -11164,6 +11893,20 @@
                         "hallucination-type": "K32",
                         "factors": [
                             "M1"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ],
+                "4": [
+                    {
+                        "start-lineno": "17",
+                        "end-lineno": "19",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
                         ],
                         "affections": [
                             "A1"
@@ -11250,6 +11993,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "2",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -11310,7 +12054,9 @@
                         ],
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -11390,6 +12136,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "2",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -11437,7 +12184,22 @@
                         "conflict-content": "\u6839\u636e\u63d0\u793a\u8bcd popitem \u65b9\u6cd5\u7684\u63cf\u8ff0\uff0c\u5e94\u8be5\u662f\u201c\u79fb\u9664\u5e76\u8fd4\u56de\u6700\u5c11\u4f7f\u7528\u7684 (key, value) \u5bf9\u201d\uff0c\u4f46 self.cache.popitem() \u5b9e\u9645\u4e0a\u662f\u4ece\u5b57\u5178\u4e2d\u968f\u673a\u79fb\u9664\u4e00\u4e2a\u9879\uff0c\u8fd9\u5e76\u4e0d\u7b26\u5408\u201c\u6700\u5c11\u4f7f\u7528\u201d\u9879\u7684\u5b9a\u4e49\u3002",
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": [
+                    {
+                        "start-lineno": "16",
+                        "end-lineno": "18",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ],
+                "7": []
             }
         }
     },
@@ -11518,6 +12280,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "1",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -11580,7 +12343,9 @@
                         "conflict-content": "popitem \u65b9\u6cd5\u9700\u8981\u79fb\u9664\u5e76\u8fd4\u56de\u6700\u8fd1\u4f7f\u7528\u7684 (key, value) \u5bf9\uff0c\u4f46\u6a21\u578b\u54cd\u5e94\u7684 popitem \u65b9\u6cd5\u5b9e\u73b0\u8fd4\u56de\u7684\u662f\u6700\u540e\u63d2\u5165\u7684 (key, value) \u5bf9\uff0c\u4e0e prompt \u63cf\u8ff0\u7684\u201c\u6700\u8fd1\u4f7f\u7528\u201d\u4e0d\u4e00\u81f4\u3002",
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -11628,6 +12393,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "1",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -11647,7 +12413,21 @@
                 ],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [
+                    {
+                        "start-lineno": "20",
+                        "end-lineno": "20",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": "pass"
+                    }
+                ]
             }
         }
     },
@@ -11799,7 +12579,9 @@
                         "conflict-content": "\u793a\u8bcd\u672a\u660e\u786e\u7ed9\u51fa\u9700\u8981\u5904\u7406\u7684\u6b63\u5219\u8868\u8fbe\u5f0f\u6a21\u5f0f\u548c\u5177\u4f53\u903b\u8f91\uff0c\u53ea\u662f\u7ed9\u51fa\u4e86\u4e00\u822c\u6027\u7684\u63cf\u8ff0\u3002",
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -11881,7 +12663,22 @@
                 ],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [
+                    {
+                        "start-lineno": "26",
+                        "end-lineno": "27",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ],
+                "7": []
             }
         }
     },
@@ -12001,7 +12798,22 @@
                     }
                 ],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [
+                    {
+                        "start-lineno": "10",
+                        "end-lineno": "10",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ],
+                "7": []
             }
         }
     },
@@ -12090,7 +12902,8 @@
         },
         "B3": {
             "prompt": {
-                "logic-complexity": "5",
+                "logic-complexity": "4",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -12137,7 +12950,9 @@
                         ],
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -12232,7 +13047,21 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [
+                    {
+                        "start-lineno": "30",
+                        "end-lineno": "30",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ]
             }
         }
     },
@@ -12312,7 +13141,8 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": []
             }
         }
     },
@@ -12363,13 +13193,28 @@
             "prompt": {
                 "logic-complexity": "1",
                 "fuzzy": "true",
+                "incomplete": "true",
                 "fuzzy-content": "\u72b6\u6001\u7684\u63cf\u8ff0\u4e0d\u6e05"
             },
             "code": {
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [
+                    {
+                        "start-lineno": "21",
+                        "end-lineno": "31",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ]
             }
         }
     },
@@ -12438,7 +13283,30 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [
+                    {
+                        "start-lineno": "14",
+                        "end-lineno": "14",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ],
+                "7": [
+                    {
+                        "start-lineno": "",
+                        "end-lineno": "",
+                        "hallucination-type": "K32",
+                        "factors": [],
+                        "affections": []
+                    }
+                ]
             }
         }
     },
@@ -12484,14 +13352,15 @@
         "A2": {
             "prompt": {
                 "logic-complexity": "1",
-                "fuzzy": "true",
-                "fuzzy-content": "prompt\u524d\u540e\u81ea\u6211\u77db\u76fe"
+                "fuzzy-content": ""
             },
             "code": {
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -12573,7 +13442,26 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [
+                    {
+                        "start-lineno": "20",
+                        "end-lineno": "20",
+                        "hallucination-type": "C2",
+                        "factors": [
+                            "P4",
+                            "M1"
+                        ],
+                        "affections": [
+                            "A1",
+                            "A2",
+                            "A4",
+                            "A5"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ],
+                "7": []
             }
         }
     },
@@ -12600,7 +13488,22 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [
+                    {
+                        "start-lineno": "16",
+                        "end-lineno": "16",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ],
+                "7": []
             }
         }
     },
@@ -12700,14 +13603,28 @@
                         "trigger-testcase": ""
                     }
                 ],
-                "3": []
+                "3": [],
+                "4": [
+                    {
+                        "start-lineno": "13",
+                        "end-lineno": "25",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ]
             }
         }
     },
     "62b896de755ee91dce50a183": {
         "B3": {
             "prompt": {
-                "logic-complexity": "5",
+                "logic-complexity": "4",
                 "fuzzy-content": ""
             },
             "code": {
@@ -12740,7 +13657,37 @@
                         ],
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": [
+                    {
+                        "start-lineno": "26",
+                        "end-lineno": "26",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    },
+                    {
+                        "start-lineno": "89",
+                        "end-lineno": "89",
+                        "hallucination-type": "R1",
+                        "factors": [
+                            "M1"
+                        ],
+                        "affections": [
+                            "A1",
+                            "A4",
+                            "A5"
+                        ],
+                        "conflict-content": "raises ParserError:",
+                        "trigger-testcase": ""
+                    }
+                ],
+                "7": []
             }
         },
         "A3": {
@@ -12820,6 +13767,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "3",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -12882,7 +13830,9 @@
                         ],
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": [],
+                "7": []
             }
         },
         "A3": {
@@ -12962,7 +13912,7 @@
     "62b8a7b2755ee91dce50a4a7": {
         "B3": {
             "prompt": {
-                "logic-complexity": "4",
+                "logic-complexity": "3",
                 "fuzzy-content": ""
             },
             "code": {
@@ -12983,7 +13933,9 @@
                         "trigger-testcase": ""
                     }
                 ],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         },
         "A3": {
@@ -13015,14 +13967,30 @@
     "6305f9991d275c6667163c50": {
         "B3": {
             "prompt": {
-                "logic-complexity": "2",
+                "logic-complexity": "1",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [
+                    {
+                        "start-lineno": "16",
+                        "end-lineno": "17",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": "pass"
+                    }
+                ],
+                "7": []
             }
         },
         "A3": {
@@ -13042,6 +14010,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "2",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -13105,6 +14074,29 @@
                             "A1"
                         ],
                         "trigger-testcase": ""
+                    }
+                ],
+                "4": [
+                    {
+                        "start-lineno": "18",
+                        "end-lineno": "24",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ],
+                "7": [
+                    {
+                        "start-lineno": "",
+                        "end-lineno": "",
+                        "hallucination-type": "R1",
+                        "factors": [],
+                        "affections": []
                     }
                 ]
             }
@@ -13238,6 +14230,20 @@
                             "A1"
                         ],
                         "conflict-content": "request.matrix",
+                        "trigger-testcase": ""
+                    }
+                ],
+                "4": [
+                    {
+                        "start-lineno": "13",
+                        "end-lineno": "13",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
                         "trigger-testcase": ""
                     }
                 ]
@@ -13390,7 +14396,8 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": []
             }
         }
     },
@@ -13398,13 +14405,16 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "1",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         },
         "A3": {
@@ -13424,6 +14434,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "3",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -13483,7 +14494,8 @@
                         "conflict-content": "Prompt\u4e2d\u660e\u786e\u63d0\u5230\u5e94\u5ffd\u7565\u4ee3\u7801\u5757\u4e2d\u7684\u6807\u7b7e\uff0c\u4f46\u4ee3\u7801\u5728\u66ff\u6362\u6807\u7b7e\u65f6\u4f7f\u7528\u7684\u662f\u539f\u59cb\u6587\u672ctext\uff0c\u800c\u4e0d\u662f\u79fb\u9664\u4e86\u4ee3\u7801\u5757\u7684text_without_code_blocks\u3002\u8fd9\u6837\u4f1a\u5bfc\u81f4\u4ee3\u7801\u5757\u4e2d\u7684\u6807\u7b7e\u4e5f\u88ab\u66ff\u6362\uff0c\u8fd9\u4e0ePrompt\u4e2d\u5ffd\u7565\u4ee3\u7801\u5757\u7684\u9700\u6c42\u51b2\u7a81\u3002",
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": []
             }
         },
         "A3": {
@@ -13559,6 +14571,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "2",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -13578,7 +14591,8 @@
                     }
                 ],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": []
             }
         },
         "A3": {
@@ -13659,13 +14673,15 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "1",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": []
             }
         },
         "A3": {
@@ -13684,7 +14700,8 @@
     "6306292a52e177c0ba469f41": {
         "B3": {
             "prompt": {
-                "logic-complexity": "2",
+                "logic-complexity": "1",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -13745,6 +14762,16 @@
                         ],
                         "conflict-content": "\u6a21\u578b\u7684\u5b9e\u73b0\u68c0\u67e5\u6807\u7b7e\u662f\u5426\u4e3a\u975e\u7a7a\u5b57\u7b26\u4e32\u5e76\u4e14\u4e0d\u5305\u542b\u7a7a\u683c\u3002\u7136\u800c\uff0cprompt\u8981\u6c42\u68c0\u67e5\u6807\u7b7e\u662f\u5426\u5305\u542b\u975e\u6cd5\u5b57\u7b26",
                         "trigger-testcase": ""
+                    }
+                ],
+                "4": [],
+                "7": [
+                    {
+                        "start-lineno": "",
+                        "end-lineno": "",
+                        "hallucination-type": "R1",
+                        "factors": [],
+                        "affections": []
                     }
                 ]
             }
@@ -13821,6 +14848,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "2",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -13880,7 +14908,9 @@
                         ],
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": [],
+                "7": []
             }
         },
         "A3": {
@@ -13954,7 +14984,7 @@
     "6306299052e177c0ba469fe8": {
         "B3": {
             "prompt": {
-                "logic-complexity": "2",
+                "logic-complexity": "3",
                 "fuzzy": "true",
                 "fuzzy-content": "\u6ca1\u6709\u8bf4\u660e\u4e0d\u5339\u914d\u7684\u60c5\u51b5\u4e0b\u600e\u4e48\u5904\u7406"
             },
@@ -13977,7 +15007,9 @@
                         "trigger-testcase": ""
                     }
                 ],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         },
         "A3": {
@@ -14069,7 +15101,8 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": []
             }
         }
     },
@@ -14095,7 +15128,9 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -14141,13 +15176,29 @@
         "A2": {
             "prompt": {
                 "logic-complexity": "2",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [
+                    {
+                        "start-lineno": "27",
+                        "end-lineno": "27",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ],
+                "7": []
             }
         }
     },
@@ -14167,13 +15218,16 @@
         "A2": {
             "prompt": {
                 "logic-complexity": "2",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -14193,13 +15247,16 @@
         "A2": {
             "prompt": {
                 "logic-complexity": "2",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -14239,7 +15296,17 @@
                     }
                 ],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": [
+                    {
+                        "start-lineno": "",
+                        "end-lineno": "",
+                        "hallucination-type": "R1",
+                        "factors": [],
+                        "affections": []
+                    }
+                ]
             }
         }
     },
@@ -14318,7 +15385,9 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -14401,7 +15470,22 @@
                         "trigger-testcase": ""
                     }
                 ],
-                "3": []
+                "3": [],
+                "4": [
+                    {
+                        "start-lineno": "15",
+                        "end-lineno": "15",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": "pass"
+                    }
+                ],
+                "7": []
             }
         }
     },
@@ -14459,7 +15543,22 @@
                     }
                 ],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [
+                    {
+                        "start-lineno": "18",
+                        "end-lineno": "18",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ],
+                "7": []
             }
         }
     },
@@ -14527,7 +15626,9 @@
                         "conflict-content": "\u6ca1\u6709\u6309\u7167xml\u540d\u5bf9\u6587\u4ef6\u5206\u7c7b",
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -14553,7 +15654,9 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -14690,7 +15793,8 @@
                         "conflict-content": "prompt\u6ca1\u6709\u8bf4\u6e05\u66ff\u6362\u5185\u5bb9",
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": []
             }
         }
     },
@@ -14731,7 +15835,21 @@
                 ],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [
+                    {
+                        "start-lineno": "18",
+                        "end-lineno": "18",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": "pass"
+                    }
+                ]
             }
         }
     },
@@ -14800,7 +15918,9 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -14856,7 +15976,8 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": []
             }
         }
     },
@@ -14930,7 +16051,7 @@
         },
         "A2": {
             "prompt": {
-                "logic-complexity": "3",
+                "logic-complexity": "4",
                 "fuzzy-content": ""
             },
             "code": {
@@ -14985,6 +16106,20 @@
                         "hallucination-type": "K2",
                         "factors": [
                             "M1",
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ],
+                "4": [
+                    {
+                        "start-lineno": "17",
+                        "end-lineno": "55",
+                        "hallucination-type": "K32",
+                        "factors": [
                             "M2"
                         ],
                         "affections": [
@@ -15070,6 +16205,7 @@
         "A2": {
             "prompt": {
                 "logic-complexity": "3",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -15090,7 +16226,21 @@
                     }
                 ],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [
+                    {
+                        "start-lineno": "20",
+                        "end-lineno": "21",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": "pass"
+                    }
+                ]
             }
         }
     },
@@ -15166,13 +16316,16 @@
         "A2": {
             "prompt": {
                 "logic-complexity": "3",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -15225,6 +16378,29 @@
                             "A1"
                         ],
                         "trigger-testcase": ""
+                    }
+                ],
+                "4": [
+                    {
+                        "start-lineno": "31",
+                        "end-lineno": "40",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ],
+                "7": [
+                    {
+                        "start-lineno": "",
+                        "end-lineno": "",
+                        "hallucination-type": "K32",
+                        "factors": [],
+                        "affections": []
                     }
                 ]
             }
@@ -15285,13 +16461,16 @@
         "A2": {
             "prompt": {
                 "logic-complexity": "3",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -15367,7 +16546,6 @@
         "A2": {
             "prompt": {
                 "logic-complexity": "2",
-                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -15388,7 +16566,9 @@
                     }
                 ],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -15469,7 +16649,17 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": [
+                    {
+                        "start-lineno": "",
+                        "end-lineno": "",
+                        "hallucination-type": "C1",
+                        "factors": [],
+                        "affections": []
+                    }
+                ]
             }
         }
     },
@@ -15550,7 +16740,9 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -15606,7 +16798,9 @@
                 ],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -15744,7 +16938,8 @@
                         "conflict-content": "\u5e94\u4f7f\u7528 http://nodeinfo.diaspora.software/ns/schema/1.0 \u800c\u4e0d\u662f http://nodeinfo.diaspora.software/ns/schema/2.0\u3002",
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": []
             }
         }
     },
@@ -15820,7 +17015,8 @@
         },
         "B3": {
             "prompt": {
-                "logic-complexity": "3",
+                "logic-complexity": "2",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -15855,7 +17051,30 @@
                         "trigger-testcase": ""
                     }
                 ],
-                "3": []
+                "3": [],
+                "4": [
+                    {
+                        "start-lineno": "27",
+                        "end-lineno": "27",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ],
+                "7": [
+                    {
+                        "start-lineno": "",
+                        "end-lineno": "",
+                        "hallucination-type": "K32",
+                        "factors": [],
+                        "affections": []
+                    }
+                ]
             }
         }
     },
@@ -15882,7 +17101,8 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": []
             }
         }
     },
@@ -15955,6 +17175,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "2",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -15987,7 +17208,8 @@
                         ],
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": []
             }
         }
     },
@@ -16068,7 +17290,17 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": [
+                    {
+                        "start-lineno": "",
+                        "end-lineno": "",
+                        "hallucination-type": "K32",
+                        "factors": [],
+                        "affections": []
+                    }
+                ]
             }
         }
     },
@@ -16153,7 +17385,8 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": []
             }
         }
     },
@@ -16174,13 +17407,37 @@
         "A2": {
             "prompt": {
                 "logic-complexity": "2",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
                 "1": [],
                 "2": [],
                 "3": [],
-                "0": []
+                "0": [],
+                "4": [
+                    {
+                        "start-lineno": "15",
+                        "end-lineno": "20",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ],
+                "7": [
+                    {
+                        "start-lineno": "",
+                        "end-lineno": "",
+                        "hallucination-type": "K32",
+                        "factors": [],
+                        "affections": []
+                    }
+                ]
             }
         }
     },
@@ -16274,7 +17531,30 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [
+                    {
+                        "start-lineno": "23",
+                        "end-lineno": "33",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ],
+                "7": [
+                    {
+                        "start-lineno": "",
+                        "end-lineno": "",
+                        "hallucination-type": "K32",
+                        "factors": [],
+                        "affections": []
+                    }
+                ]
             }
         }
     },
@@ -16362,7 +17642,9 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -16499,7 +17781,30 @@
                         "trigger-testcase": ""
                     }
                 ],
-                "3": []
+                "3": [],
+                "4": [
+                    {
+                        "start-lineno": "29",
+                        "end-lineno": "37",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ],
+                "7": [
+                    {
+                        "start-lineno": "",
+                        "end-lineno": "",
+                        "hallucination-type": "R1",
+                        "factors": [],
+                        "affections": []
+                    }
+                ]
             }
         }
     },
@@ -16581,7 +17886,9 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -16668,7 +17975,9 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -16752,7 +18061,23 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [
+                    {
+                        "start-lineno": "27",
+                        "end-lineno": "43",
+                        "hallucination-type": "C1",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1",
+                            "A4"
+                        ],
+                        "conflict-content": "MappingNode",
+                        "trigger-testcase": ""
+                    }
+                ]
             }
         }
     },
@@ -16829,13 +18154,15 @@
         "A2": {
             "prompt": {
                 "logic-complexity": "3",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": []
             }
         }
     },
@@ -16904,7 +18231,9 @@
                     }
                 ],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -16977,6 +18306,7 @@
         "A2": {
             "prompt": {
                 "logic-complexity": "3",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -17011,7 +18341,8 @@
                     }
                 ],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": []
             }
         }
     },
@@ -17086,7 +18417,7 @@
         },
         "A2": {
             "prompt": {
-                "logic-complexity": "4",
+                "logic-complexity": "3",
                 "incomplete": "true",
                 "fuzzy-content": ""
             },
@@ -17094,7 +18425,21 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [
+                    {
+                        "start-lineno": "22",
+                        "end-lineno": "22",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ]
             }
         }
     },
@@ -17174,7 +18519,8 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": []
             }
         }
     },
@@ -17259,7 +18605,8 @@
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": []
             }
         }
     },
@@ -17291,7 +18638,7 @@
         },
         "B3": {
             "prompt": {
-                "logic-complexity": "2",
+                "logic-complexity": "1",
                 "fuzzy-content": ""
             },
             "code": {
@@ -17312,7 +18659,8 @@
                 ],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": []
             }
         }
     },
@@ -17437,7 +18785,9 @@
                         ],
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -17547,7 +18897,21 @@
                         "trigger-testcase": ""
                     }
                 ],
-                "3": []
+                "3": [],
+                "4": [
+                    {
+                        "start-lineno": "23",
+                        "end-lineno": "23",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ]
             }
         }
     },
@@ -17623,6 +18987,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "2",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -17656,7 +19021,9 @@
                         "trigger-testcase": ""
                     }
                 ],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -17732,13 +19099,16 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "2",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -17816,6 +19186,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "1",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -17878,7 +19249,8 @@
                         "conflict-content": "\u9700\u6c42\u662f\u521b\u5efa\u4e00\u4e2a IniType \u590d\u6742\u7c7b\u578b\u7684\u5b9e\u4f8b\uff0c\u800c\u6a21\u578b\u7684\u5b9e\u73b0\u4ee3\u7801\u5374\u662f\u4e00\u4e2a\u6587\u4ef6\u641c\u7d22\u529f\u80fd\u7684\u5b9e\u73b0",
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": []
             }
         }
     },
@@ -17957,6 +19329,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "1",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -17992,7 +19365,25 @@
                         "conflict-content": "\u63d0\u793a\u8bcd\u63cf\u8ff0\u7684\u662f\u83b7\u53d6\u4e00\u4e2a\u914d\u7f6e\u7ba1\u7406\u5668\uff0c\u800c\u5b9e\u73b0\u5374\u662f\u8bfb\u53d6\u4e00\u4e2a\u914d\u7f6e\u6587\u4ef6\u5e76\u8fd4\u56de ConfigParser \u5bf9\u8c61\u3002\u6a21\u578b\u54cd\u5e94\u7684\u5b9e\u73b0\u6ca1\u6709\u9075\u5faa\u539f\u59cb\u4ee3\u7801\u7684\u610f\u56fe\uff0c\u5373\u83b7\u53d6\u670d\u52a1\u5b9e\u4f8b\uff0c\u800c\u662f\u76f4\u63a5\u8bfb\u53d6\u914d\u7f6e\u6587\u4ef6\u3002",
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": [
+                    {
+                        "start-lineno": "15",
+                        "end-lineno": "15",
+                        "hallucination-type": "C1",
+                        "factors": [
+                            "M1",
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1",
+                            "A4"
+                        ],
+                        "conflict-content": "AnsibleConfigManager",
+                        "trigger-testcase": ""
+                    }
+                ],
+                "7": []
             }
         }
     },
@@ -18070,6 +19461,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "1",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -18115,6 +19507,16 @@
                             "A1"
                         ],
                         "trigger-testcase": ""
+                    }
+                ],
+                "4": [],
+                "7": [
+                    {
+                        "start-lineno": "",
+                        "end-lineno": "",
+                        "hallucination-type": "K32",
+                        "factors": [],
+                        "affections": []
                     }
                 ]
             }
@@ -18195,6 +19597,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "1",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -18228,7 +19631,22 @@
                         "trigger-testcase": ""
                     }
                 ],
-                "3": []
+                "3": [],
+                "4": [
+                    {
+                        "start-lineno": "18",
+                        "end-lineno": "18",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ],
+                "7": []
             }
         }
     },
@@ -18305,14 +19723,29 @@
         },
         "B3": {
             "prompt": {
-                "logic-complexity": "3",
+                "logic-complexity": "2",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [
+                    {
+                        "start-lineno": "38",
+                        "end-lineno": "38",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ]
             }
         }
     },
@@ -18389,6 +19822,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "2",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -18423,7 +19857,9 @@
                         "conflict-content": "cls.schema",
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -18504,6 +19940,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "1",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -18552,7 +19989,8 @@
                         "conflict-content": "\u6a21\u578b\u7684\u5b9e\u73b0\u5047\u8bbe include \u662f\u4e00\u4e2a\u6307\u4ee4\uff0c\u800c\u5b9e\u9645\u9700\u6c42\u662f\u5c06 include_groups \u4e2d\u6307\u5b9a\u7684\u7ec4\u6dfb\u52a0\u5230 parser_dict['groups'] \u4e2d\u3002",
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": []
             }
         }
     },
@@ -18633,6 +20071,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "1",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -18652,7 +20091,22 @@
                         "trigger-testcase": ""
                     }
                 ],
-                "3": []
+                "3": [],
+                "4": [
+                    {
+                        "start-lineno": "16",
+                        "end-lineno": "16",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ],
+                "7": []
             }
         }
     },
@@ -18732,6 +20186,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "1",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -18766,7 +20221,9 @@
                         "conflict-content": "\u6a21\u578b\u751f\u6210\u7684MyClass\u7c7b\u4e2d\u7684deprecated_args\u5b57\u5178\u4e0e\u539f\u59cb\u4ee3\u7801\u9700\u6c42\u5b58\u5728\u76f4\u63a5\u51b2\u7a81\u3002\u539f\u59cb\u9700\u6c42\u662f\u4eceself.spec_helper.iterate_option_specs()\u4e2d\u63d0\u53d6\u5e9f\u5f03\u7684\u9009\u9879\uff0c\u800c\u6a21\u578b\u751f\u6210\u7684\u4ee3\u7801\u662f\u4e00\u4e2a\u56fa\u5b9a\u7684\u5b57\u5178\u3002",
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -18847,6 +20304,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "2",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -18895,7 +20353,22 @@
                         "conflict-content": "\u6a21\u578b\u54cd\u5e94\u4ee3\u7801\u4e2d\uff0c\u53ea\u68c0\u67e5\u4e86 cli_args \u4e2d\u7684\u53c2\u6570\u662f\u5426\u5728 answer_file_args \u4e2d\uff0c\u5e76\u5728\u53d1\u73b0\u76f8\u540c\u53c2\u6570\u65f6\u6253\u5370\u4e00\u4e2a\u8b66\u544a\u3002\u7136\u800c\uff0cprompt \u548c\u53c2\u8003\u4ee3\u7801\u7684\u8981\u6c42\u662f\u68c0\u67e5 cli_args \u548c answer_file_args \u4e2d\u662f\u5426\u5305\u542b\u5df2\u5e9f\u5f03\u7684\u53c2\u6570\u3002",
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": [
+                    {
+                        "start-lineno": "21",
+                        "end-lineno": "26",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ],
+                "7": []
             }
         }
     },
@@ -19038,6 +20511,29 @@
                         "conflict-content": "\u6a21\u578b\u54cd\u5e94\u4e2d\u7684\u793a\u4f8b\u53ea\u63d0\u4f9b\u4e86\u4e00\u4e2a\u9759\u6001\u7684\u5b57\u5178\u6765\u4ee3\u66ff\u52a8\u6001\u5bfb\u627e\u7684\u903b\u8f91",
                         "trigger-testcase": ""
                     }
+                ],
+                "4": [
+                    {
+                        "start-lineno": "16",
+                        "end-lineno": "16",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ],
+                "7": [
+                    {
+                        "start-lineno": "",
+                        "end-lineno": "",
+                        "hallucination-type": "R1",
+                        "factors": [],
+                        "affections": []
+                    }
                 ]
             }
         }
@@ -19115,6 +20611,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "1",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -19161,6 +20658,29 @@
                         ],
                         "conflict-content": "Prompt\u4e2d\u63d0\u5230\u7684\u4ee3\u7801\u5e94\u8be5\u57fa\u4e8eget_parser_option_specs\u65b9\u6cd5\u83b7\u53d6\u9009\u9879\u89c4\u8303\uff0c\u800c\u6a21\u578b\u54cd\u5e94\u4e2d\u7684\u4ee3\u7801\u5219\u5047\u8bbe\u5b58\u5728\u4e00\u4e2acommands\u5b57\u5178\uff0c\u8fd9\u4e2a\u4e0eprompt\u63cf\u8ff0\u4e0d\u4e00\u81f4\u3002",
                         "trigger-testcase": ""
+                    }
+                ],
+                "4": [
+                    {
+                        "start-lineno": "18",
+                        "end-lineno": "18",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ],
+                "7": [
+                    {
+                        "start-lineno": "",
+                        "end-lineno": "",
+                        "hallucination-type": "R1",
+                        "factors": [],
+                        "affections": []
                     }
                 ]
             }
@@ -19238,7 +20758,8 @@
         },
         "B3": {
             "prompt": {
-                "logic-complexity": "2",
+                "logic-complexity": "1",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -19301,7 +20822,8 @@
                         "conflict-content": "\u63d0\u793a\u8bcd\u8981\u6c42\u83b7\u53d6\u201csilent\u201d\u53c2\u6570\u7684\u540d\u79f0\uff0c\u800c\u53c2\u8003\u4ee3\u7801\u4e2d\u7684\u529f\u80fd\u662f\u57fa\u4e8e\u53c2\u6570\u662f\u5426\u4ee5 \u2018\u2014\u2014silent\u2014\u2019 \u5f00\u5934\u6765\u5224\u65ad\uff0c\u8fd9\u4e0e\u53c2\u8003\u4ee3\u7801\u4e2d\u7684\u590d\u6742\u903b\u8f91\u4e0d\u7b26\u3002",
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": []
             }
         }
     },
@@ -19378,6 +20900,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "1",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -19397,7 +20920,30 @@
                 ],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [
+                    {
+                        "start-lineno": "16",
+                        "end-lineno": "16",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ],
+                "7": [
+                    {
+                        "start-lineno": "",
+                        "end-lineno": "",
+                        "hallucination-type": "K32",
+                        "factors": [],
+                        "affections": []
+                    }
+                ]
             }
         }
     },
@@ -19458,7 +21004,7 @@
         },
         "B3": {
             "prompt": {
-                "logic-complexity": "3",
+                "logic-complexity": "2",
                 "fuzzy-content": ""
             },
             "code": {
@@ -19492,7 +21038,8 @@
                         ],
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": []
             }
         }
     },
@@ -19569,6 +21116,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "1",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -19630,7 +21178,9 @@
                         ],
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -19706,7 +21256,8 @@
         },
         "B3": {
             "prompt": {
-                "logic-complexity": "2",
+                "logic-complexity": "1",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -19752,6 +21303,20 @@
                             "A1"
                         ],
                         "conflict-content": "\u8be5\u51fd\u6570\u7684\u76ee\u6807\u662f\u9a8c\u8bc1\u9009\u9879\u662f\u5426\u5728\u53ef\u7528\u9009\u9879\u4e2d\uff0c\u4f46\u6a21\u578b\u54cd\u5e94\u786c\u7f16\u7801\u4e86\u9009\u62e9\u5217\u8868\uff0c\u5e76\u6ca1\u6709\u6839\u636e\u5b9e\u9645\u4e0a\u4e0b\u6587\u52a8\u6001\u68c0\u67e5\u3002",
+                        "trigger-testcase": ""
+                    }
+                ],
+                "4": [
+                    {
+                        "start-lineno": "15",
+                        "end-lineno": "15",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
                         "trigger-testcase": ""
                     }
                 ]
@@ -19831,13 +21396,15 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "1",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
                 "0": [],
                 "1": [],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": []
             }
         }
     },
@@ -19913,6 +21480,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "2",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -19948,7 +21516,17 @@
                         "trigger-testcase": ""
                     }
                 ],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": [
+                    {
+                        "start-lineno": "",
+                        "end-lineno": "",
+                        "hallucination-type": "K32",
+                        "factors": [],
+                        "affections": []
+                    }
+                ]
             }
         }
     },
@@ -20024,6 +21602,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "3",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -20044,7 +21623,9 @@
                     }
                 ],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -20119,7 +21700,8 @@
         },
         "B3": {
             "prompt": {
-                "logic-complexity": "2",
+                "logic-complexity": "1",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -20153,7 +21735,9 @@
                         "trigger-testcase": ""
                     }
                 ],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -20200,7 +21784,8 @@
         },
         "B3": {
             "prompt": {
-                "logic-complexity": "3",
+                "logic-complexity": "2",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -20220,7 +21805,9 @@
                     }
                 ],
                 "3": [],
-                "0": []
+                "0": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -20296,6 +21883,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "2",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -20315,7 +21903,9 @@
                         "trigger-testcase": ""
                     }
                 ],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     },
@@ -20377,6 +21967,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "2",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -20397,7 +21988,22 @@
                         "conflict-content": "\u6a21\u578b\u7684\u5b9e\u73b0\u5047\u8bbe\u6709\u4e00\u4e2a\u9884\u5b9a\u4e49\u7684 type_dict\uff0c\u8fd9\u662f\u4e00\u4e2a\u786c\u7f16\u7801\u7684\u5b57\u5178\u6620\u5c04\uff0c\u800c\u9700\u6c42\u8868\u660e\u5b9e\u9645\u5e94\u7528\u4e2d\u7c7b\u578b\u662f\u52a8\u6001\u83b7\u53d6\u7684",
                         "trigger-testcase": ""
                     }
-                ]
+                ],
+                "4": [
+                    {
+                        "start-lineno": "25",
+                        "end-lineno": "25",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
+                        "trigger-testcase": ""
+                    }
+                ],
+                "7": []
             }
         }
     },
@@ -20473,6 +22079,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "2",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -20535,6 +22142,20 @@
                             "A1"
                         ],
                         "conflict-content": "Prompt \u6307\u5b9a\u7684\u6587\u4ef6\u683c\u5f0f\u672a\u660e\u786e\uff0c\u6a21\u578b\u5047\u8bbe\u4f7f\u7528\u4e86 JSON \u683c\u5f0f\uff0c\u800c\u5b9e\u9645\u6587\u4ef6\u53ef\u80fd\u662f YAML \u683c\u5f0f",
+                        "trigger-testcase": ""
+                    }
+                ],
+                "4": [
+                    {
+                        "start-lineno": "21",
+                        "end-lineno": "21",
+                        "hallucination-type": "K32",
+                        "factors": [
+                            "M2"
+                        ],
+                        "affections": [
+                            "A1"
+                        ],
                         "trigger-testcase": ""
                     }
                 ]
@@ -20678,6 +22299,16 @@
                         "conflict-content": "\u6a21\u578b\u54cd\u5e94\u4e2d\u4f7f\u7528\u7684\u73af\u5883\u53d8\u91cfCONFIG_PATH\u4e0e\u63d0\u793a\u8bcd\u8981\u6c42\u7684ANSIBLE_CONFIG\u51b2\u7a81",
                         "trigger-testcase": ""
                     }
+                ],
+                "4": [],
+                "7": [
+                    {
+                        "start-lineno": "",
+                        "end-lineno": "",
+                        "hallucination-type": "K32",
+                        "factors": [],
+                        "affections": []
+                    }
                 ]
             }
         }
@@ -20712,6 +22343,7 @@
         "B3": {
             "prompt": {
                 "logic-complexity": "1",
+                "incomplete": "true",
                 "fuzzy-content": ""
             },
             "code": {
@@ -20732,7 +22364,9 @@
                     }
                 ],
                 "2": [],
-                "3": []
+                "3": [],
+                "4": [],
+                "7": []
             }
         }
     }

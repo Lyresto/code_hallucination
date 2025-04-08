@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" remoteFilesAllowedToDisappearOnAutoupload="false">
+  <component name="PublishConfigData" autoUpload="Always" serverName="4090-liuyang@10.212.253.45:22" remoteFilesAllowedToDisappearOnAutoupload="false">
     <serverData>
       <paths name="3090">
         <serverdata>
@@ -16,6 +16,21 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="4090-liuyang@10.212.253.45:22">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/liuyang/hallucination" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="4090-seexpr">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
     </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
   </component>
 </project>
