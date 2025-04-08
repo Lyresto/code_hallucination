@@ -1,0 +1,7 @@
+matplotlib==3.9.2
+numpy==1.26.4
+openai==1.58.1
+plotly==6.0.0
+torch==2.0.1+cu117
+tqdm==4.67.0
+transformers==4.44.2

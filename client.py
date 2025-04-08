@@ -1,6 +1,7 @@
 import threading
 import time
-import openai
+from http.client import HTTPException
+
 import torch
 from openai import OpenAI
 from transformers import AutoTokenizer, AutoModelForCausalLM
@@ -28,14 +29,14 @@ class Client:
             return
         Client.model_name = model_name
         if model_name == 'deepseek-coder-1.3b':
-            path = '/home/shared_models/workspace/deepseek-coder-1.3b-instruct/'
+            path = 'path/to/model'
         elif model_name == 'deepseek-coder-7b':
-            path = '/home/shared_models/workspace/deepseek-coder-7b-instruct-v1.5/'
+            path = 'path/to/model'
         elif model_name == 'codellama-7b':
-            path = './models/codellama-7b'
-        elif 'gpt' in model_name or 'r1' in model_name:
+            path = 'path/to/model'
+        elif model_name in ['gpt-4', 'deepseek-r1']:
             path = None
-            if 'r1' in model_name:
+            if model_name == 'deepseek-r1':
                 model_name = 'deepseek-reasoner'
         else:
             raise NotImplementedError()
@@ -45,21 +46,20 @@ class Client:
             max_memory = {0: "20000MiB", 1: "20000MiB"}
             Client.model = AutoModelForCausalLM.from_pretrained(path, trust_remote_code=True, device_map='auto',
                                                                 max_memory=max_memory)
-        elif 'gpt' in model_name or 'deepseek-reasoner' in model_name:
+        elif model_name in ['gpt-4', 'deepseek-r1']:
             Client.model = model_name
         else:
             Client.model = AutoModelForCausalLM.from_pretrained(path, trust_remote_code=True).cuda()
 
-    def generate(self, msg, **kwargs):
-        # time.sleep(1)
-        if isinstance(msg, str):
-            self.messages.append({'role': 'user', 'content': msg})
+    def generate(self, user_request, **kwargs):
+        if isinstance(user_request, str):
+            self.messages.append({'role': 'user', 'content': user_request})
         else:
-            self.messages = msg
+            self.messages = user_request
         if self.tokenizer is None:
-            if 'gpt' in self.model:
+            if self.model == 'gpt-4':
                 client = openai_client
-            elif 'deepseek-reasoner' in self.model:
+            elif self.model == 'deepseek-reasoner':
                 client = deepseek_client
             else:
                 raise NotImplementedError()
@@ -69,24 +69,18 @@ class Client:
                     completion = client.chat.completions.create(
                         model=self.model,
                         temperature=0.0,
-                        top_p=0.95,
                         messages=self.messages,
-                        # response_format={
-                        #     'type': 'json_object'
-                        # }
                     )
                     break
-                except Exception as e:
-                    print('[ERROR]', e)
-                    print(f'[ERROR] fail to call {self.model}, trying again...')
+                except HTTPException:
                     max_call -= 1
                     if max_call == 0:
-                        raise RuntimeError()
+                        raise RuntimeError('max retries exceeded')
                     time.sleep(2)
             return (
                 completion.choices[0].message.content,
                 completion.choices[0].message.model_extra['reasoning_content']
-                if 'deepseek-reasoner' in self.model else None
+                if self.model == 'deepseek-reasoner' else None
             )
 
         inputs = self.tokenizer.apply_chat_template(
