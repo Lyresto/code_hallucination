@@ -14,13 +14,13 @@
 
 ---
 
-### Abstract
+## Abstract
 
 The rise of Large Language Models (LLMs) has significantly advanced various applications on software engineering tasks, particularly in code generation. Despite the promising performance, LLMs are prone to generate hallucinations, which means LLMs might produce outputs that deviate from users' intent, exhibit internal inconsistencies, or misaligned with the real-world knowledge, making the deployment of LLMs potentially risky in a wide range of applications. Existing work mainly focuses on investigating the hallucination in the domain of Natural Language Generation (NLG), leaving a gap in understanding the types, causes, and impacts of hallucinations in the context of code generation. To bridge the gap, we conducted a thematic analysis of the LLM-generated code to summarize and categorize the hallucinations, as well as their causes and impacts. Our study established a comprehensive taxonomy of code hallucinations, encompassing 3 primary categories and 12 specific categories. Furthermore, we systematically analyzed the distribution of hallucinations, exploring variations among different LLMs and benchmarks. Moreover, we perform an in-depth analysis on the causes and impacts of various hallucinations, aiming to provide valuable insights into hallucination mitigation. Finally, to enhance the correctness and reliability of LLM-generated code in a lightweight manner, we explore a training-free hallucination mitigation approach by prompt enhancing techniques. We believe our findings will shed light on future research about hallucination evaluation and mitigation, ultimately paving the way for building more effective and reliable code LLMs in the future.
 
 ---
 
-### Study Design
+## Study Design
 
 - Research Questions:  
   - RQ1: Distribution of Code Hallucinations.
@@ -33,7 +33,7 @@ The rise of Large Language Models (LLMs) has significantly advanced various appl
 
 ---
 
-### Data
+## Data
 
 File Structure:  
 
@@ -77,12 +77,12 @@ The main fields in `result.jsonl` include:
 
 ---
 
-### Scripts
+## Scripts
 
 File Structure:
 
 ```
-scripts/
+/
 ├── client.py           # LLM invocation proxy client
 ├── constants.py        # Some constants used in data analysis
 ├── analyze.ipynb       # Data visualization analysis script
